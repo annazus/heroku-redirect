@@ -1,0 +1,27 @@
+{
+  "name": "redirect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js",
+    "heroku-postbuild": "babel src/index.js -d build",
+    "build": "rm -fr build && babel src/index.js -d build",
+    "dev": "babel-node src/index.js"
+  },
+  "engines": {
+    "node": "10.16.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2"
+  }
+}
